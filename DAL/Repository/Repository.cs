@@ -7,10 +7,10 @@ namespace DAL.Repository
     public class Repository<T> : IRepository<T> where T : class
     {
 
-        private readonly ApplicationDbContext _db;
+        private readonly DbContext _db;
         internal DbSet<T> dbSet;
 
-        public Repository(ApplicationDbContext db)
+        public Repository(DbContext db)
         {
             _db = db;
             this.dbSet = _db.Set<T>();
