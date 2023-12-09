@@ -2,7 +2,7 @@
 
 namespace DAL.Entity
 {
-    internal class Card
+    public class Card
     {
         [Key]
         public int id { get; set; }

@@ -2,7 +2,7 @@
 
 namespace DAL.Entity
 {
-    internal class Trip
+    public class Trip
     {
         public Trip()
         {

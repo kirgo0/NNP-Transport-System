@@ -2,7 +2,7 @@
 
 namespace DAL.Entity
 {
-    internal class BusStop
+    public class BusStop
     {
         public BusStop()
         {

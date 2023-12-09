@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Entity
 {
-    internal class Schedule
+    public class Schedule
     {
         [Key]
         public int id { get; set; }

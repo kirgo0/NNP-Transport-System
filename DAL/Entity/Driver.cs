@@ -2,7 +2,7 @@
 
 namespace DAL.Entity
 {
-    internal class Driver : Employee
+    public class Driver : Employee
     {
         [Required]
         public bool isAvailable { get; set; }

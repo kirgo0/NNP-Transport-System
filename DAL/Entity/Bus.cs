@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 namespace DAL.Entity
 {
-    internal class Bus
+    public class Bus
     {
         [Key]
         public int id { get; set; }

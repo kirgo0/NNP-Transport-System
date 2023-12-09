@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository
 {
-    internal class CardRepository : Repository<Card>, ICardRepository
+    public class CardRepository : Repository<Card>, ICardRepository
     {
         public CardRepository(ApplicationDbContext db) : base(db)
         {

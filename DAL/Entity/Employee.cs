@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Entity
 {
-    internal abstract class Employee
+    public abstract class Employee
     {
         [Key]
         public int id { get; set; }

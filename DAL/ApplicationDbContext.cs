@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL
 {
-    internal class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         DbSet<Bus> Busses { get; set; }
         DbSet<BusStop> BusStops { get; set; }

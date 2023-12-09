@@ -2,7 +2,7 @@
 
 namespace DAL.Entity
 {
-    internal class Passanger : Employee
+    public class Passanger : Employee
     {
         [Required]
         public bool isInBus { get; set; }

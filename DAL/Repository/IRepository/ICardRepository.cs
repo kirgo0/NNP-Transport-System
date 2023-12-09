@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repository.IRepository
 {
-    internal interface ICardRepository : IRepository<Card>
+    public interface ICardRepository : IRepository<Card>
     {
     }
 }
