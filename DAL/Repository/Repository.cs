@@ -13,13 +13,12 @@ namespace DAL.Repository
         public Repository(DbContext db)
         {
             _db = db;
-            this.dbSet = _db.Set<T>();
+            dbSet = _db.Set<T>();
         }
 
         public async Task CreateAsync(T entity)
         {
             await dbSet.AddAsync(entity);
-            await SaveAsync();
         }
 
         public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
@@ -51,10 +50,9 @@ namespace DAL.Repository
             return await query.FirstOrDefaultAsync();
         }
 
-        public async Task RemoveAsync(T entity)
+        public void Remove(T entity)
         {
             dbSet.Remove(entity);
-            await SaveAsync();
         }
 
         public async Task SaveAsync()
@@ -62,10 +60,9 @@ namespace DAL.Repository
             await _db.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(T entity)
+        public void Update(T entity)
         {
             dbSet.Update(entity);
-            await SaveAsync();
         }
 
     }

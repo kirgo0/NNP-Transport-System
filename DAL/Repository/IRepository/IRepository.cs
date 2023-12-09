@@ -6,8 +6,8 @@ namespace DAL.Repository.IRepository
     {
         Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filer = null);
         Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true);
-        Task RemoveAsync(T entity);
-        Task UpdateAsync(T entity);
+        void Remove(T entity);
+        void Update(T entity);
         Task SaveAsync();
     }
 }

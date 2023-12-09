@@ -17,9 +17,9 @@ namespace DAL.Entity
         [ForeignKey("card_Id")]
         public virtual Card Card { get; set; }
 
-        public int bus_Id { get; set; }
+        public int? bus_Id { get; set; }
 
-        [ForeignKey("bus_id")]
+        [ForeignKey("bus_Id")]
         public virtual Bus Bus { get; set; }
     }
 }

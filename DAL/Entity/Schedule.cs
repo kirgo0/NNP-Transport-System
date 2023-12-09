@@ -16,7 +16,7 @@ namespace DAL.Entity
 
         public int trip_Id { get; set; }
 
-        [ForeignKey("trip_id")]
+        [ForeignKey("trip_Id")]
         public virtual Trip Trip { get; set; }
     }
 }
