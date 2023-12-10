@@ -10,6 +10,12 @@ namespace DAL.Entity
         [Required]
         public bool isAvailable { get; set; }
 
+        [Required]
+        public int maxSeatsAmount { get; set; }
+
+        [Required] 
+        public int availableSeatsAmount { get; set; }
+
         public int trip_Id { get; set; }
 
         [ForeignKey("trip_Id")]
