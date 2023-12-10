@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NNP Transport System", "NNP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{4267E75A-9E9E-4891-A5B2-3B503E39B4DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.Tests", "DAL.Tests\DAL.Tests.csproj", "{BE0E56D8-0517-43C2-B500-C771263E2A50}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4267E75A-9E9E-4891-A5B2-3B503E39B4DF} = {4267E75A-9E9E-4891-A5B2-3B503E39B4DF}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{4267E75A-9E9E-4891-A5B2-3B503E39B4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4267E75A-9E9E-4891-A5B2-3B503E39B4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4267E75A-9E9E-4891-A5B2-3B503E39B4DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE0E56D8-0517-43C2-B500-C771263E2A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0E56D8-0517-43C2-B500-C771263E2A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0E56D8-0517-43C2-B500-C771263E2A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE0E56D8-0517-43C2-B500-C771263E2A50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

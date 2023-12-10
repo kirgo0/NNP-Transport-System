@@ -16,53 +16,32 @@ namespace DAL.Repository
             dbSet = _db.Set<T>();
         }
 
-        public async Task CreateAsync(T entity)
+        public void Create(T entity)
         {
-            await dbSet.AddAsync(entity);
+            dbSet.Add(entity);
         }
 
-        public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
+        public List<T> GetAll()
         {
-            IQueryable<T> query = dbSet;
-
-            if (filter != null)
-            {
-                query = query.Where(filter);
-            }
-
-            return await query.ToListAsync();
+            return dbSet.ToList();
         }
 
-        public async Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true)
+        public T GetById(int id)
         {
-            IQueryable<T> query = dbSet;
-
-            if (!tracked)
-            {
-                query = query.AsNoTracking();
-            }
-
-            if (filter != null)
-            {
-                query = query.Where(filter);
-            }
-
-            return await query.FirstOrDefaultAsync();
+            return dbSet.Find(id);
         }
 
         public void Remove(T entity)
         {
             dbSet.Remove(entity);
         }
-
-        public async Task SaveAsync()
-        {
-            await _db.SaveChangesAsync();
-        }
-
         public void Update(T entity)
         {
             dbSet.Update(entity);
+        }
+        public void Save()
+        {
+            _db.SaveChanges();
         }
 
     }

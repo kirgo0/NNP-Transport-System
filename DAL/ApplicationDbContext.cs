@@ -1,5 +1,6 @@
 ﻿using DAL.Entity;
 using Microsoft.EntityFrameworkCore;
+using System.Data.Common;
 
 namespace DAL
 {
@@ -16,5 +17,6 @@ namespace DAL
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
+
     }
 }
