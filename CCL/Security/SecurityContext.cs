@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CCL.Security
 {
-    public class SecurityContext
+    public static class SecurityContext
     {
         static User _user = null;
 

@@ -18,5 +18,10 @@ namespace CCL.Security.Identity
             Name = name;
             Role = role;
         }
+
+        public string GetRole()
+        {
+            return Role;
+        }
     }
 }
